@@ -1,0 +1,222 @@
+body {
+
+font-family: Arial, Helvetica, sans-serif;
+background-color: #f4f6f8;
+margin: 0;
+padding: 0;
+
+}
+
+
+.container {
+
+width: 750px;
+margin: 60px auto;
+background: white;
+padding: 40px;
+border-radius: 10px;
+box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+text-align: center;
+
+}
+
+
+h1 {
+
+margin-bottom: 5px;
+color: #2c3e50;
+
+}
+
+
+.subtitle {
+
+color: #777;
+margin-bottom: 25px;
+
+}
+
+
+form {
+
+margin-bottom: 30px;
+
+}
+
+
+input {
+
+width: 60%;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 6px;
+font-size: 14px;
+
+}
+
+
+button {
+
+padding: 12px 20px;
+background-color: #2c3e50;
+color: white;
+border: none;
+border-radius: 6px;
+margin-left: 10px;
+cursor: pointer;
+font-size: 14px;
+
+}
+
+
+button:hover {
+
+background-color: #34495e;
+
+}
+
+
+.profile-card {
+
+margin-top: 30px;
+
+}
+
+
+.avatar {
+
+width: 120px;
+border-radius: 50%;
+margin-bottom: 10px;
+
+}
+
+
+.username {
+
+color: #777;
+margin-bottom: 10px;
+
+}
+
+
+.bio {
+
+color: #555;
+margin-bottom: 20px;
+
+}
+
+
+.stats {
+
+display: flex;
+justify-content: space-around;
+margin-top: 20px;
+
+}
+
+
+.stat-box {
+
+background-color: #f7f7f7;
+padding: 15px;
+border-radius: 8px;
+width: 30%;
+
+}
+
+
+.stat-box h3 {
+
+margin: 0;
+color: #2c3e50;
+
+}
+
+
+.score-card {
+
+margin-top: 30px;
+background-color: #f7f7f7;
+padding: 20px;
+border-radius: 8px;
+
+}
+
+
+.score-card h1 {
+
+color: #2c3e50;
+font-size: 36px;
+
+}
+
+
+.repos-section {
+
+margin-top: 40px;
+
+}
+
+
+table {
+
+width: 100%;
+border-collapse: collapse;
+
+}
+
+
+th {
+
+background-color: #2c3e50;
+color: white;
+padding: 10px;
+
+}
+
+
+td {
+
+padding: 10px;
+border-bottom: 1px solid #ddd;
+
+}
+
+
+.chart-section {
+
+margin-top: 40px;
+
+}
+
+
+.chart {
+
+width: 100%;
+max-width: 500px;
+margin-top: 10px;
+
+}
+
+
+.download-section {
+
+margin-top: 35px;
+
+}
+
+
+.download-btn {
+
+background-color: #27ae60;
+
+}
+
+
+.download-btn:hover {
+
+background-color: #219150;
+
+}

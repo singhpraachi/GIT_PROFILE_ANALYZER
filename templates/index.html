@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>GitHub Profile Analyzer</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>GitHub Profile Analyzer</h1>
+
+<p class="subtitle">Analyze any GitHub profile instantly</p>
+
+
+<form method="POST">
+
+<input
+type="text"
+name="username"
+placeholder="Enter GitHub username"
+required>
+
+<button type="submit">Analyze</button>
+
+</form>
+
+
+<!-- Error Message -->
+
+{% if error %}
+
+<div class="error-message">
+{{ error }}
+</div>
+
+{% endif %}
+
+
+{% if user %}
+
+<!-- Profile Section -->
+
+<div class="profile-card">
+
+<img src="{{ user.avatar_url }}" class="avatar">
+
+<h2>{{ user.name }}</h2>
+
+<p class="username">@{{ user.login }}</p>
+
+<p class="bio">{{ user.bio }}</p>
+
+
+<div class="stats">
+
+<div class="stat-box">
+<h3>{{ user.public_repos }}</h3>
+<p>Repositories</p>
+</div>
+
+<div class="stat-box">
+<h3>{{ user.followers }}</h3>
+<p>Followers</p>
+</div>
+
+<div class="stat-box">
+<h3>{{ user.following }}</h3>
+<p>Following</p>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- GitHub Score -->
+
+<div class="score-card">
+
+<h2>GitHub Profile Score</h2>
+
+<h1>{{ score }}</h1>
+
+</div>
+
+
+<!-- Top Repositories -->
+
+<div class="repos-section">
+
+<h2>Top Repositories</h2>
+
+<table>
+
+<tr>
+<th>Repository</th>
+<th>Stars</th>
+</tr>
+
+{% for repo in top_repos %}
+
+<tr>
+<td>{{ repo.name }}</td>
+<td>{{ repo.stargazers_count }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+
+
+<!-- Language Chart -->
+
+<div class="chart-section">
+
+<h2>Language Usage</h2>
+
+<img
+src="{{ url_for('static', filename='language_chart.png') }}"
+class="chart">
+
+</div>
+
+
+<!-- CSV Download -->
+
+<div class="download-section">
+
+<a href="/static/report.csv" download>
+
+<button class="download-btn">
+Download CSV Report
+</button>
+
+</a>
+
+</div>
+
+{% endif %}
+
+</div>
+
+</body>
+
+</html>
